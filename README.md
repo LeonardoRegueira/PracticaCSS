@@ -1,3 +1,3 @@
 # PracticaCSS
-Segunda practica Basica de CSS
+Segunda practica Basica de CSS.
 
