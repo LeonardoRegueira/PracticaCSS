@@ -131,3 +131,434 @@ div h2, div h3{
     background-color: royalblue;
     box-sizing: border-box;
 }
+/**/
+/* Propiedades de texto */
+
+.textProp_1 {
+    text-align: center;
+    /*text aling sirve para ubicar el texto centrado, a la izquierda, 
+    a la derecha o justificado, como en el word*/
+}
+
+.textProp_2 {
+    color: red;
+    text-align: justify;
+    text-decoration: underline;
+    text-shadow: 5px 3px 5px black;
+    /*primer valor hacia la derecha, segundo hacia abajo, tercero el blur*/
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    font-family: "Whisper", cursive;
+}
+
+/* Propiedades de links */
+
+#anchor {
+    text-decoration: none;
+}
+
+/*Los links en hmtl pueden tener cuatro estados, cuando no fue visitado, 
+cuando fue visitado, cunado le pasamos el mouse por encima y cuando 
+está activo. Para que funcione tienen que estar en este orden.
+
+Acá vemos como utilizar las pseudoclases de las que hablamos
+*/
+
+a:link {
+    /*Cuando el link no ha sido visitado*/
+    color: brown;
+}
+
+a:visited {
+    /*Cuando el link ha sido visitado*/
+    color: gray;
+}
+
+a:hover {
+    /*Cuando paso el mouse por arriba del link*/
+    color: blue
+}
+
+a:active {
+    /*Cuando tengo presionado el boton del mouse encima del link*/
+    color: red;
+    font-size: 30px;
+}
+
+/*A todos estos estados podemos agregarle las propiedades que estuvimos 
+viendo*/
+
+
+/* Propiedades de las Tablas */
+
+table {
+    width: 100%;
+
+    /*El border collapse se pone despues de asignar el borde a la tabla*/
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: solid 1px black;
+}
+
+th {
+    background-color: brown;
+    color: white;
+    text-align: left;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+tr:nth-child(even) {
+    /*nth-child es una pseudoclase que sirve para seleccionar hijos de la clase que tengan determinada caracteristica*/
+    background-color: blueviolet;
+}
+
+tr:nth-child(4) {
+    background-color: #f00;
+}
+
+tr:nth-child(3) {
+    background-color: yellow;
+}
+
+tr:hover {
+    background-color: #666;
+    color: white;
+    cursor: pointer;
+}
+
+/* Propiedades de display */
+
+.div_1 {
+    background-color: chocolate;
+}
+
+.div_2 {
+    background-color: yellow;
+}
+
+.span_1 {
+    background-color: aqua;
+}
+
+.span_2 {
+    background-color: blueviolet;
+}
+
+/*Los div ocupan todo el ancho de la pantalla, los span solo ocupan el espacio que ocupe el texto, se puede modificar eso:*/
+
+.inline {
+    /* a los elementos con clase inline le asignamos un display: inline a este display no se le pueden asignar propiedades width y height ni tampoco margenes verticales*/
+    display: inline;
+    /* Se empieza a comportar como los span 1 y 2 */
+}
+
+.block {
+    /* a los elementos con clase block le asignamos un display: block este display muestra los elementos en líneas independientes, se le puede asignar width, height y márgenes verticales*/
+    display: block;
+    /* Se empieza a comportar como los div 1 y 2 */
+}
+
+.span_3 {
+    display: block;
+    background-color: red;
+    color: white;
+    max-width: 450px;
+    /*Podemos asignarle un ancho máximo*/
+}
+
+.inline-block {
+    display: inline-block;
+    background-color: #ccc;
+    height: 30px;
+    width: 500px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Las etiquetas HTML que viene por defecto con display inline son span, anchor e img */
+
+
+/* Propiedad Position */
+
+#position {
+    color: white;
+    background-color: black;
+    width: 400px;
+    text-align: center;
+    position: sticky;
+    /*  
+        static: es el que viene por defecto en todos los elementos html
+        relative: es una posicion relativa con respecto a donde debería estar posicionado el elemento. Puede superponerse con otros elementos.
+        fixed: indica la posicion relativa con respecto a lo que estamos Viendo en la pantalla y se desplaza si scroleamos.
+        absolute: indica la posicion relativa pero con respecto al elemento padre mas cercano que tenga, si no tiene padre se relaciona con el body, no se desplaza si scroleamos.
+        sticky: Es una mezcla entre relative y fixed
+    */
+    left: 20px;
+    /*indica la distancia que se tiene que mover desde la izquierda*/
+    top: 45px;
+    /*indica la distancia que se tiene que mover desde arriba */
+}
+
+/* Propiedad Float */
+
+.float {
+    height: 300px;
+}
+
+.img-left {
+    height: 250px;
+    /* width: 250px; */
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+    width: 200px;
+    text-align: justify;
+}
+
+#p-float {
+    color: coral;
+}
+
+#p-float::first-letter {
+    color: red;
+    font-size: 2rem;
+}
+
+/* Propiedad Center */
+
+.center {
+    background-color: tomato;
+    text-align: center;
+    /* Siempre hay que asignarle un ancho */
+    width: 400px;
+    margin: 0px auto;
+    padding: 7px 0px;
+    align-items: center; /* Alinea en forma vertical */
+}
+
+#p-centrado::before {
+    content: "👍";
+}
+
+#p-centrado::after {
+    content: "👌";
+}
+
+/* Propiedades de las Listas */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+#h3NavBar {
+    color: violet;
+    font-size: 30px;
+}
+
+ul li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+/* Animaciones */
+
+#animacion {
+    width: 50px;
+    height: 50px;
+    background-color: brown;
+    margin: 4% auto;
+    animation: redondeo 3s 2s infinite;
+    /* nombre | tiempo que dura cada etapa | demora para empezar | modo */
+}
+
+@keyframes redondeo {
+
+    /* Es la propiedad CSS que nos permite crear la animacion, indico etapas y que quiero que haga en cada una */
+    0% {
+        border-radius: 0 0 0 0;
+        background-color: green;
+        /* transform: rotate(0deg); */
+    }
+
+    25% {
+        border-radius: 50% 0 0 0;
+        background-color: orange;
+        transform: rotate(45deg);
+    }
+
+    50% {
+        border-radius: 50% 50% 0 0;
+        background-color: aqua;
+        transform: rotate(90deg);
+    }
+
+    75% {
+        border-radius: 50% 50% 50% 0;
+        background-color: yellow;
+        transform: rotate(135deg);
+    }
+
+    100% {
+        border-radius: 50% 50% 50% 50%;
+        background-color: hotpink;
+        transform: rotate(180deg);
+    }
+}
+
+/* Transiciones */
+#suelo {
+    border-bottom: 30px chocolate solid;
+    /* Si quisieramos darle un ancho cualquiera 
+    max-width: 600px;
+    overflow: hidden; */
+}
+
+#macana {
+    /* background-color: #666; */
+    height: 6rem;
+    width: 10rem;
+    margin-top: 2rem;
+    background-image: url(../img/macana.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#suelo:hover #macana {
+    margin-left: 100%;
+    transition:cubic-bezier(0.075, 0.42, 0.165, 1) 4s;
+    /*ease: este es el valor por defecto. Tiene un comienzo lento,
+    luego rápido y termina de nuevo lentamente.
+    linear: la misma velocidad durante toda la duración de la transición.
+    ease-in: efecto de transición con comienzo lento.
+    ease-out: efecto de transición con comienzo rápido y final lento.
+    ease-in-out: efecto de transición con comienzo y final lento;más rápido en medio. Equivalente a cubic-bezier(0.42,0,0.58,1).
+    cubic-bezier(n,n,n,n): define tus propios valores para la curva de Bezier. Cada valor es entre 0 y 1.
+    https://cubic-bezier.com/#.17,.67,.83,.67
+    */
+}
+
+/* Grid */
+
+#contenedor-grid {
+    /* Indico que el contenedor se va a mostrar como grid, establezco la cantidad de columnas, la cantidad de filas y finalmente le pongo nombre a cada una de las áreas (cada área es equivalente a una celda en una tabla de excel) */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 4rem 25% 1fr 1fr 8rem;
+    grid-template-areas:
+    "header menu menu menu"
+    "submenu submenu submenu submenu"
+    "main main . image"
+    "main main . extra"
+    "banner banner banner banner";
+}
+
+#header {
+    background-color: black;
+    border: solid 2px forestgreen;
+    grid-area: header; /* Indico a que área del grid va a corresponder este elemento */
+}
+
+#menu {
+    background-color: crimson;
+    border: solid 2px forestgreen;
+    grid-area: menu;
+}
+
+#submenu {
+    background-color: rgb(1,140,230);
+    border: solid 2px forestgreen;
+    grid-area: submenu; 
+}
+
+#main {
+    background-color: rgb(3,45,85);
+    border: solid 2px forestgreen;
+    grid-area: main;
+}
+
+#image {
+    background-color: rgba(153,207,224,1);
+    border: solid 2px forestgreen;
+    grid-area: image;
+}
+
+#extra {
+    background-color: darkturquoise;
+    border: solid 2px forestgreen;
+    grid-area: extra;    
+}
+
+#banner {
+    background-color: yellow;
+    border: solid 2px forestgreen;
+    grid-area: banner;
+}
+
+#btnVolver {
+    display: block;
+    background-color: antiquewhite;
+    margin: 1rem auto;
+    border: .15rem #aaa outset;
+    border-radius: .25rem;
+    width: 10rem;
+    height: 3rem;
+    cursor: pointer;
+}
+
+#btnVolver:hover {
+    background-color: cadetblue;
+    box-shadow: .1rem .2rem .25rem rgba(0,0,0,.5);
+    transition: ease 1s;
+}
+
+#btnVolver:active {
+    border: .15rem #aaa inset;
+}
+
+#btnVolver a {
+    text-decoration: none;
+    color: hotpink;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 760px) {
+    #contenedor-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "header"
+    "menu"
+    "submenu"
+    /* "main" */
+    "image"
+    "extra"
+    "banner";
+}    
+#main {
+    display: none;
+}
+}
+
+@media screen and (min-width: 761px) and (max-width:1023px) {
+    #contenedor-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 4em repeat(2, 3fr) repeat(2, 2fr);
+        grid-template-areas:
+        "header header header header"
+        "submenu submenu submenu submenu"
+        "menu main main main"
+        "menu banner banner banner"
+        "menu extra extra image";
+}
+}
